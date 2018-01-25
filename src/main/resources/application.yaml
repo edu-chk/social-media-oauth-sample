@@ -1,0 +1,28 @@
+server:
+  port: 8443
+  ssl:
+    key-store: '.keystore' file location
+    key-store-password: changeit
+    key-password: changeit
+logging:
+  level:
+    root: INFO
+    org.springframework.web: info
+    org.springframework.security: info
+
+spring:
+  mvc:
+    view:
+      prefix: /jsp/
+      suffix: .jsp
+    static-path-pattern: /resources/**
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: can be found here: https://console.developers.google.com/apis/credentials?project=social-media-oauth-sample
+            client-secret: can be found here: https://console.developers.google.com/apis/credentials?project=social-media-oauth-sample
+          facebook:
+            client-id: can be found here: https://developers.facebook.com/apps/1891622387834623/settings/basic/
+            client-secret: can be found here: https://developers.facebook.com/apps/1891622387834623/settings/basic/
